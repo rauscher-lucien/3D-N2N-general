@@ -69,7 +69,7 @@ def main():
         batch_size = args.batch_size
         lr = args.lr
         patience = args.patience
-        project_dir = os.path.join('/g', 'prevedel', 'members', 'Rauscher', 'final_projects', '3D-N2N-single_volume')
+        project_dir = os.path.join('/g', 'prevedel', 'members', 'Rauscher', 'final_projects', '3D-N2N-general')
         
         print(f"Using train data directory: {train_data_dir}")
         print(f"Train continue: {train_continue}")
@@ -85,7 +85,7 @@ def main():
     else:
         # Default settings for local testing
         train_data_dir = r"\\tier2.embl.de\prevedel\members\Rauscher\data\big_data_small-test"
-        project_dir = r"C:\Users\rausc\Documents\EMBL\final_projects\3D-N2N-single_volume"
+        project_dir = r"C:\Users\rausc\Documents\EMBL\final_projects\3D-N2N-general"
         project_name = 'test_x'
         train_continue = 'off'
         disp_freq = 1
