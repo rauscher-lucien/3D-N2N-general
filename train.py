@@ -113,6 +113,11 @@ class Trainer:
 
         ### initialize network ###
         model = self.get_model()
+
+        if torch.cuda.device_count() > 1:
+            print("Using", torch.cuda.device_count(), "GPUs!")
+            model = nn.DataParallel(model)
+
         criterion = torch.nn.MSELoss().to(self.device)
         optimizer = torch.optim.Adam(model.parameters(), self.lr)
 
