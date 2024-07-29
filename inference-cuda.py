@@ -103,7 +103,7 @@ def main():
     inference_folder = os.path.join(results_dir, inference_name)
     os.makedirs(inference_folder, exist_ok=True)
 
-    filenames = glob.glob(os.path.join(data_dir, "*.tif")) + glob.glob(os.path.join(data_dir, "*.tiff"))
+    filenames = glob.glob(os.path.join(data_dir, "*.tif")) + glob.glob(os.path.join(data_dir, "*.TIFF"))
     print("Following files will be denoised:  ", filenames)
 
     print(f"Using device: {device}")
