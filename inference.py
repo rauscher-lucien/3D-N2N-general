@@ -56,7 +56,7 @@ def main():
 
     #********************************************************#
 
-    project_dir = r"\\tier2.embl.de\prevedel\members\Rauscher\final_projects\3D-N2N-general\test_1_big_data_small_2_model_nameUNet3_UNet_base64_stack_depth32_num_epoch1000_batch_size8_lr1e-05_patience50"
+    project_dir = r"\\tier2.embl.de\prevedel\members\Rauscher\final_projects\3D-N2N-general\test_1_big_data_small_2_model_nameUNet4_UNet_base32_stack_depth32_num_epoch1000_batch_size8_lr1e-05_patience50"
     data_dir = r"C:\Users\rausc\Documents\EMBL\data\big_data_small-test\mouse"
     inference_name = os.path.basename(data_dir)
 
@@ -115,7 +115,7 @@ def main():
         inf_dataset,
         batch_size=batch_size,
         shuffle=False,
-        num_workers=2
+        num_workers=1
     )
 
     # Dynamically get model based on model_name and UNet_base

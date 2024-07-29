@@ -133,13 +133,13 @@ def main():
         transform=inf_transform
     )
 
-    batch_size = 8
+    batch_size = 4
     print("Dataset size:", len(inf_dataset))
     inf_loader = torch.utils.data.DataLoader(
         inf_dataset,
         batch_size=batch_size,
         shuffle=False,
-        num_workers=2
+        num_workers=1
     )
 
     # Dynamically get model based on model_name and UNet_base
